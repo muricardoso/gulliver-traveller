@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Roboto, sans-serif
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1250px;
+    align-items: center;
+    margin: 0 20px;
+    flex-direction: column;
+}
+.principal-name {
+    margin-left: 20px;
+    line-height: 15px;
+}
+.menu-desktop {
+    display: none;
+}
+.toggle:checked ~ .menu-desktop {
+    display: initial;
+}
+@media (min-width: 700px) { 
+    .menu-desktop {
+        display: initial;
+    }
+    header {
+        flex-direction: row;
+        margin: auto;
+    }
+}
+@media (min-width: 1000px) { 
+    .menu-desktop {
+        display: initial;
+    }
+}
