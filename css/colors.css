@@ -3,7 +3,8 @@
     --color-secondary: #51425f;
     --color-grey-primary: #948e99;
     --color-green-primary: #cad1c3;
-    --color-green-secondary: #e7eed0;
+    --color-green-secondary: #f0f3e8;
+    --color-green-third: #ebeee252;
 }
 
 .color-primary {
@@ -35,4 +36,7 @@
 }
 .background-green-secondary {
     background-color: var(--color-green-secondary);
+}
+.background-green-third {
+    background-color: var(--color-green-third);
 }

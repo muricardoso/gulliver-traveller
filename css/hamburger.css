@@ -1,14 +1,19 @@
 
+
+.container-hamburguer{
+    position: absolute;
+    width: 30px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    top: 20px;
+    left: 20px;
+}
 @media (min-width: 700px) { 
     .container-hamburguer {
         display: none;
     }
 }
-.container-hamburguer{
-    position: relative;
-    width: 60px;
-    margin: 20px auto;
-  }
   .btn {
     display: flex;
     align-items: center;
@@ -20,7 +25,7 @@
     cursor: pointer;
   }
   .btn-left {
-    background-color: #333;
+    background-color: var(--color-primary);
     position: absolute;
     height: 3px;
     width: 10px;
@@ -30,7 +35,7 @@
     transition-duration: 0.5s;
   }
   .btn-left:before {
-    background-color: #333;
+    background-color: var(--color-primary);
     position: absolute;
     width: 10px;
     height: 3px;
@@ -40,7 +45,7 @@
     transition-duration: 0.5s;
   }
   .btn-left:after {
-    background-color: #333;
+    background-color: var(--color-primary);
     position: absolute;
     width: 10px;
     height: 3px;
@@ -51,7 +56,7 @@
   }
   
   .btn-right {
-    background-color: #333;
+    background-color: var(--color-primary);
     position: absolute;
     height: 3px;
     width: 10px;
@@ -61,7 +66,7 @@
     transition-duration: 0.5s;
   }
   .btn-right:before {
-    background-color: #333;
+    background-color: var(--color-primary);
     position: absolute;
     width: 10px;
     height: 3px;
@@ -71,7 +76,7 @@
     transition-duration: 0.5s;
   }
   .btn-right:after {
-    background-color: #333;
+    background-color: var(--color-primary);
     position: absolute;
     width: 10px;
     height: 3px;

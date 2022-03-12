@@ -1,15 +1,20 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:Roboto, sans-serif
+    font-family:'Fredoka', sans-serif
 }
-
+.cursor-pointer {
+    cursor: pointer;
+}
 header {
+    border-bottom: 1px solid  var(--color-grey-primary);
+}
+header .container-header {
     display: flex;
     justify-content: space-between;
     max-width: 1250px;
     align-items: center;
-    margin: 0 20px;
+    padding: 20px;
     flex-direction: column;
 }
 .principal-name {
@@ -17,22 +22,41 @@ header {
     line-height: 15px;
 }
 .menu-desktop {
-    display: none;
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    max-height: 0px;
+    overflow: hidden;
+    padding-top: 0;
+    transition: .25s ease-in-out;
 }
 .toggle:checked ~ .menu-desktop {
-    display: initial;
+    max-height: 800px;
+    padding-top: 20px;
+    transition: .25s ease-in-out;
+}
+a .line-hover {
+    width: 0;
+    height: 2px;
+    transition: width .25s ease-in-out;
+}
+a:hover .line-hover {
+   content: '';
+   width: 80%;
+   height: 2px;
+   background-color: var(--color-primary);
+   transition: width .25s ease-in-out;
 }
 @media (min-width: 700px) { 
     .menu-desktop {
-        display: initial;
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        max-height: 800px;
     }
-    header {
+    header .container-header {
         flex-direction: row;
         margin: auto;
     }
 }
-@media (min-width: 1000px) { 
-    .menu-desktop {
-        display: initial;
-    }
-}
+
