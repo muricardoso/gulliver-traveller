@@ -14,6 +14,9 @@
     flex-direction: column;
    
 }
+.title-card {
+    margin-bottom: 20px;
+}
 form {
     padding: 20px;
 }
