@@ -46,11 +46,53 @@
   </header>
   <section id="card-cadastro-turistico" class="background-green-secondary">
     <form action="" method="post">
-      <div class="container-input-text">
-        <label for="local-name" class="color-secondary font-bold">Qual nome do lugar?</label>
-        <input id="local-name" type="text" name="name" placeholder="Nome do local">
-      </div>
-      
+      <section class="orientation-group-inputs-radio">
+        <div class="container-input-radio">
+          <label class="color-primary font-bold">Qual tipo do local?</label>
+          <div class="radio-options">
+            <div class="flex-center cursor-pointer">
+              <input class="cursor-pointer" type="radio" id="tourist-spot" name="local_type" value="tourist_spot">
+              <label class="color-secondary cursor-pointer" for="tourist-spot">Ponto turístico</label>
+            </div>
+            <div class="flex-center cursor-pointer">
+              <input class="cursor-pointer" type="radio" id="city" name="local_type" value="city">
+              <label class="color-secondary  cursor-pointer" for="city">Cidade</label>
+            </div>
+            <div class="flex-center cursor-pointer">
+              <input class=" cursor-pointer" type="radio" id="establishment" name="local_type" value="establishment">
+              <label class="color-secondary  cursor-pointer" for="establishment">Estabelecimento</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="orientation-group-inputs">
+        <div class="container-input-text">
+          <div>
+            <label for="local-name" class="color-primary font-bold">Qual nome do lugar?</label>
+          </div>
+          <input id="local-name" type="text" name="name" placeholder="Nome do local">
+        </div>
+        <div class="container-input-text">
+          <div>
+            <label for="local-name" class="color-primary font-bold">Qual nome do lugar?</label>
+          </div>
+          <input id="local-name" type="text" name="name" placeholder="Nome do local">
+        </div>
+      </section>
+      <section class="orientation-group-inputs">
+        <div class="container-input-text">
+          <div>
+            <label for="local-name" class="color-primary font-bold">Qual nome do lugar?</label>
+          </div>
+          <input id="local-name" type="text" name="name" placeholder="Nome do local">
+        </div>
+        <div class="container-input-text">
+          <div>
+            <label for="local-name" class="color-primary font-bold">Qual nome do lugar?</label>
+          </div>
+          <input id="local-name" type="text" name="name" placeholder="Nome do local">
+        </div>
+      </section>
     </form>
   </section>
 </body>

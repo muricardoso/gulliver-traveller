@@ -6,6 +6,10 @@
 .cursor-pointer {
     cursor: pointer;
 }
+.flex-center {
+    display: flex;
+    align-items: center;
+}
 header {
     border-bottom: 1px solid  var(--color-grey-primary);
 }
@@ -47,7 +51,7 @@ a:hover .line-hover {
    background-color: var(--color-primary);
    transition: width .25s ease-in-out;
 }
-@media (min-width: 700px) { 
+@media (min-width: 600px) { 
     .menu-desktop {
         display: flex;
         gap: 10px;
