@@ -44,60 +44,112 @@
       </div>
     </div>
   </header>
-  <section id="card-cadastro-turistico" class="background-green-secondary">
-    <form action="" method="post">
-      <div class="title-card color-primary font-bold fontsize-22">Informações do lugar</div>
-      <section class="orientation-group-inputs-radio">
-        <div class="container-input-radio">
-          <label class="color-primary font-bold">Qual tipo do local?</label>
-          <div class="radio-options">
-            <div class="flex-center cursor-pointer">
-              <input class="cursor-pointer" type="radio" id="tourist-spot" name="local_type" value="tourist_spot">
-              <label class="color-secondary cursor-pointer" for="tourist-spot">Ponto turístico</label>
-            </div>
-            <div class="flex-center cursor-pointer">
-              <input class="cursor-pointer" type="radio" id="city" name="local_type" value="city">
-              <label class="color-secondary  cursor-pointer" for="city">Cidade</label>
-            </div>
-            <div class="flex-center cursor-pointer">
-              <input class=" cursor-pointer" type="radio" id="establishment" name="local_type" value="establishment">
-              <label class="color-secondary  cursor-pointer" for="establishment">Estabelecimento</label>
+  <div id="container-forms">
+    <section id="card-cadastro-turistico" class="background-green-secondary">
+      <form action="" method="post">
+        <div class="title-card color-primary font-bold fontsize-22">Informações do lugar</div>
+        <section class="orientation-group-inputs-radio">
+          <div class="container-input-radio">
+            <label class="color-primary font-bold">Qual tipo do local?</label>
+            <div class="radio-options">
+              <div class="flex-center cursor-pointer">
+                <input class="cursor-pointer" type="radio" id="tourist-spot" name="local_type" value="tourist_spot">
+                <label class="color-secondary cursor-pointer" for="tourist-spot">Ponto turístico</label>
+              </div>
+              <div class="flex-center cursor-pointer">
+                <input class="cursor-pointer" type="radio" id="city" name="local_type" value="city">
+                <label class="color-secondary  cursor-pointer" for="city">Cidade</label>
+              </div>
+              <div class="flex-center cursor-pointer">
+                <input class=" cursor-pointer" type="radio" id="establishment" name="local_type" value="establishment">
+                <label class="color-secondary  cursor-pointer" for="establishment">Estabelecimento</label>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="orientation-group-inputs">
-        <div class="container-input-text">
-          <div>
-            <label for="local-name" class="color-primary font-bold">Qual nome do lugar?</label>
+        </section>
+        <section class="orientation-group-inputs">
+          <div class="container-input-text">
+            <div>
+              <label for="local-name" class="color-primary font-bold">Qual nome do lugar?</label>
+            </div>
+            <input id="local-name" type="text" name="name" placeholder="Nome do local">
           </div>
-          <input id="local-name" type="text" name="name" placeholder="Nome do local">
-        </div>
-      
         
-      </section>
-      <section class="orientation-group-inputs">
-        <div class="container-input-text">
-          <div>
-            <label for="local-city" class="color-primary font-bold">Cidade</label>
+          
+        </section>
+        <section class="orientation-group-inputs">
+          <div class="container-input-text">
+            <div>
+              <label for="local-city" class="color-primary font-bold">Cidade</label>
+            </div>
+            <input id="local-city" type="text" name="city" placeholder="Digite a cidade">
           </div>
-          <input id="local-city" type="text" name="city" placeholder="Digite a cidade">
-        </div>
-        <div class="container-input-text">
-          <div>
-            <label for="local-adrees" class="color-primary font-bold">Endereço</label>
+          <div class="container-input-text">
+            <div>
+              <label for="local-adrees" class="color-primary font-bold">Endereço</label>
+            </div>
+            <input id="local-adrees" type="text" name="adress" placeholder="Rua, Av...">
           </div>
-          <input id="local-adrees" type="text" name="adress" placeholder="Rua, Av...">
-        </div>
-        <div class="container-input-text">
-          <div>
-            <label for="local-number" class="color-primary font-bold">Número</label>
+          <div class="container-input-text">
+            <div>
+              <label for="local-number" class="color-primary font-bold">Número</label>
+            </div>
+            <input id="local-number" type="text" name="number" placeholder="Digite o número">
           </div>
-          <input id="local-number" type="text" name="number" placeholder="Digite o número">
-        </div>
-      </section>
-    </form>
-  </section>
+        </section>
+  
+      </form>
+    </section>
+  
+    <section id="card-cadastro-turistico" class="background-green-secondary">
+      <form action="" method="post">
+        <div class="title-card color-primary font-bold fontsize-22">Sua experiência</div>
+        <section class="orientation-group-inputs-radio">
+          <div class="container-select">
+            <label class="color-primary font-bold" for="climate">Qual clima?</label>
+            <select name="climate" id="climate">
+              <option value="inverno">Inverno</option>
+              <option value="verão" selected>Verão</option>
+              <option value="outono">Outono</option>
+              <option value="primavera">Primavera</option>
+            </select>
+          </div>
+        </section>
+        <section class="orientation-group-inputs">
+          <div class="container-input-text">
+            <div>
+              <label for="local-adrees" class="color-primary font-bold">Quando iniciou?</label>
+            </div>
+            <input id="local-name" type="date" name="startDate" placeholder="">
+          </div>
+          <div class="container-input-text">
+            <div>
+              <label for="local-adrees" class="color-primary font-bold">Quando encerrou?</label>
+            </div>
+            <input id="local-name" type="date" name="endDate" placeholder="">
+          </div>
+        </section>
+        <section class="orientation-group-inputs">
+          <div class="container-currency">
+            <div>
+              <label for="local-value" class="color-primary font-bold">Valor médio de alimentacão</label>
+            </div>
+            <div class="container-fake-input-currency">
+              <span>R$</span>
+              <input for="currency-checkbox" id="local-value" type="number" min="1" placeholder="Digite valor em reais"/>
+            </div>
+          </div>
+          <div class="container-input-text">
+            <div>
+              <label for="local-adrees" class="color-primary font-bold">Endereço</label>
+            </div>
+            <input id="local-adrees" type="text" name="adress" placeholder="Rua, Av...">
+          </div>
+        </section>
+  
+      </form>
+    </section>
+  </div>
 </body>
 
 </html>

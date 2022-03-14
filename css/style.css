@@ -51,6 +51,11 @@ a:hover .line-hover {
    background-color: var(--color-primary);
    transition: width .25s ease-in-out;
 }
+.container-select {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 600px) { 
     .menu-desktop {
         display: flex;
@@ -61,6 +66,16 @@ a:hover .line-hover {
     header .container-header {
         flex-direction: row;
         margin: auto;
+    }
+    #container-forms {
+        display: flex;
+        max-width: 1250px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin: 3rem auto;
     }
 }
 
