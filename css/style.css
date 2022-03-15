@@ -92,6 +92,17 @@ footer .container-footer {
     display: flex;
     gap: 20px;
 }
+.continer-button button {
+    background-color: var(--color-button-primary);
+   
+    color: var(--color-white);
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+.continer-button button:hover {
+    background-color: var(--color-primary);
+}
 @media (min-width: 600px) { 
     .menu-desktop {
         display: flex;
@@ -122,11 +133,11 @@ footer .container-footer {
 
 }
 @media (min-width: 1230px) { 
-    footer {
+    /* footer {
         position: absolute;
         bottom: 0;
         width: 100%;
-    }
+    } */
     footer .container-footer {
         flex-direction: row;
     }
