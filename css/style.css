@@ -110,9 +110,10 @@ footer .container-footer {
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    gap: 20px;
 }
 
-.container-button button {
+.container-button .submit {
     background-color: var(--color-button-primary);
    
     color: var(--color-white);
@@ -120,8 +121,18 @@ footer .container-footer {
     border: none;
     padding: 10px;
 }
-.container-button button:hover {
+.container-button .submit:hover {
     background-color: var(--color-primary);
+}
+.container-button .reset {
+    border: 1px solid var(--color-button-primary);
+    color: var(--color-button-primary);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: transparent;
+}
+.container-button .reset:hover {
+    background-color: var(--color-green-secondary);
 }
 @media (min-width: 600px) { 
     .menu-desktop {
