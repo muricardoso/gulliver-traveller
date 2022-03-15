@@ -10,7 +10,7 @@ header {
     border-bottom: 1px solid  var(--color-grey-primary);
 }
 .max-size-flex {
-    max-width: 1250px;
+    max-width: 1350px;
     display: flex;
     padding: 20px;
 }
@@ -26,6 +26,19 @@ header .container-header {
     justify-content: flex-end;
     margin-bottom: 5px;
     gap: 5px;
+}
+.container-left {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.card-cadastro-turistico {
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 .profile-picture  {
     max-width: 40px;
@@ -92,7 +105,14 @@ footer .container-footer {
     display: flex;
     gap: 20px;
 }
-.continer-button button {
+.container-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container-button button {
     background-color: var(--color-button-primary);
    
     color: var(--color-white);
@@ -100,7 +120,7 @@ footer .container-footer {
     border: none;
     padding: 10px;
 }
-.continer-button button:hover {
+.container-button button:hover {
     background-color: var(--color-primary);
 }
 @media (min-width: 600px) { 
@@ -116,7 +136,7 @@ footer .container-footer {
     }
     #container-forms {
         display: flex;
-        max-width: 1250px;
+        max-width: 1350px;
         align-items: flex-start;
         justify-content: center;
         margin: 0 auto;
@@ -142,10 +162,18 @@ footer .container-footer {
         flex-direction: row;
     }
 }
-@media (min-height: 1050px) { 
+@media (min-width: 1310px) { 
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+/* @media (min-height: 1250px) {  
     footer {
         position: absolute;
         bottom: 0;
         width: 100%;
     }
-}
+} */

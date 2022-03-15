@@ -1,4 +1,4 @@
-#card-cadastro-turistico {
+.card-cadastro-turistico {
     border-radius: 15px;
     margin: 20px;
     box-shadow: -1px 1px 18px -6px rgb(0 0 0 / 35%);
@@ -20,7 +20,7 @@
     margin-bottom: 20px;
 }
 form {
-    padding: 20px;
+    height: 100%;
 }
 .container-input-text input, .container-fake-input-currency {
     margin-top: 5px;
@@ -133,8 +133,8 @@ textarea {
 textarea:focus {
     outline:  1px solid var(--color-secondary);
 }
-.times .container-input-text {
-    width: 85px;
+.times .container-input-tex {
+    width: initial;
 }
 .input-time::selection {
     background-color: var(--color-secondary);
@@ -157,7 +157,7 @@ input[type=file]::file-selector-button {
 
 }
 @media (min-width: 600px) {  
-    #card-cadastro-turistico {
+    .card-cadastro-turistico {
         max-width: 600px;
         margin: 0 0;
         width: 100%;
@@ -169,6 +169,6 @@ input[type=file]::file-selector-button {
         flex-direction: row;
     }
     .times .container-input-text {
-        width: 90px;
+        width: initial;
     }
 }

@@ -55,9 +55,10 @@
 
     </div>
   </header>
+  <form action="" method="post">
   <div id="container-forms">
-    <section id="card-cadastro-turistico" class="background-green-secondary">
-      <form action="" method="post">
+    <section class="background-green-secondary card-cadastro-turistico">
+     
         <div class="title-card color-primary font-bold fontsize-22">Informações do lugar</div>
         <section class="orientation-group-inputs-radio">
           <div class="container-input-radio">
@@ -75,6 +76,10 @@
                 <input class=" cursor-pointer" type="radio" id="establishment" name="local_type" value="establishment">
                 <label class="color-secondary  cursor-pointer" for="establishment">Estabelecimento</label>
               </div>
+              <div class="flex-center cursor-pointer">
+                <input class=" cursor-pointer" type="radio" id="other" name="local_type" value="other">
+                <label class="color-secondary  cursor-pointer" for="other">Outro</label>
+              </div>
             </div>
           </div>
         </section>
@@ -83,7 +88,7 @@
             <div>
               <label for="local-name" class="color-primary font-bold">Qual nome do lugar?*</label>
             </div>
-            <input id="local-name" type="text" name="name" placeholder="Nome do local">
+            <input id="local-name" type="text" name="name" placeholder="Nome do local" required>
           </div>
 
         </section>
@@ -138,9 +143,9 @@
 
           <div class="container-input-text">
             <div>
-              <label for="your-experience" class="color-primary font-bold">Segunda</label>
+              <label for="seg" class="color-primary font-bold">Segunda</label>
             </div>
-            <input type="time" id="operation" name="operation">
+            <input type="time" id="seg" name="segunda">
           </div>
           <div class="container-input-text ">
             <div>
@@ -200,11 +205,11 @@
             <label class="color-primary font-bold">Cobra entrada?*</label>
             <div class="radio-options">
               <div class="flex-center cursor-pointer">
-                <input class="cursor-pointer" type="radio" id="payEntryYes" name="payEntry" value="payEntryYes">
+                <input class="cursor-pointer" type="radio" id="payEntryYes" name="payEntry" value="payEntryYes" required>
                 <label class="color-secondary cursor-pointer" for="payEntryYes">Sim</label>
               </div>
               <div class="flex-center cursor-pointer">
-                <input class="cursor-pointer" type="radio" id="payEntryNo" name="payEntry" value="payEntryNo">
+                <input class="cursor-pointer" type="radio" id="payEntryNo" name="payEntry" value="payEntryNo"required>
                 <label class="color-secondary  cursor-pointer" for="payEntryNo">Não</label>
               </div>
             </div>
@@ -225,79 +230,83 @@
             <div>
               <label for="local-name" class="color-primary font-bold">Site do local</label>
             </div>
-            <input id="local-url" type="url" name="url" placeholder="Digite a url">
+            <input id="local-url" type="url" name="url" placeholder="https://muricardoso.github.io/gulliver-traveller/">
           </div>
          
         </section>
-      </form>
+      <!-- </form> -->
 
     </section>
     <!-- OTHER CARD -->
-    <section id="card-cadastro-turistico" class="background-green-secondary">
-      <form action="" method="post">
-        <div class="title-card color-primary font-bold fontsize-22">Sua experiência</div>
-        <section class="orientation-group-inputs-radio">
-          <div class="container-select">
-            <label class="color-primary font-bold" for="climate">Qual clima?*</label>
-            <select name="climate" id="climate">
-              <option value="inverno">Inverno</option>
-              <option value="verão" selected>Verão</option>
-              <option value="outono">Outono</option>
-              <option value="primavera">Primavera</option>
-            </select>
-          </div>
-        </section>
-        <section class="orientation-group-inputs">
-          <div class="container-input-text">
-            <div>
-              <label for="local-adrees" class="color-primary font-bold">Data inicial da viagem</label>
+    <div class="container-left">
+      <section class="background-green-secondary card-cadastro-turistico">
+        <!-- <form action="" method="post"> -->
+          <div class="title-card color-primary font-bold fontsize-22">Sua experiência</div>
+          <section class="orientation-group-inputs-radio">
+            <div class="container-select">
+              <label class="color-primary font-bold" for="climate">Qual clima?*</label>
+              <select name="climate" id="climate" required>
+                <option value="inverno">Inverno</option>
+                <option value="verão" selected>Verão</option>
+                <option value="outono">Outono</option>
+                <option value="primavera">Primavera</option>
+              </select>
             </div>
-            <input id="local-name" type="date" name="startDate" max="1979-12-31">
-          </div>
-          <div class="container-input-text">
-            <div>
-              <label for="local-adrees" class="color-primary font-bold">Data final da viagem</label>
+          </section>
+          <section class="orientation-group-inputs">
+            <div class="container-input-text">
+              <div>
+                <label for="local-adrees" class="color-primary font-bold">Data inicial da viagem</label>
+              </div>
+              <input id="local-name" type="date" name="startDate" max="1979-12-31">
             </div>
-            <input id="local-name" type="date" name="endDate" max="1979-12-31">
-          </div>
-        </section>
-        <section class="orientation-group-inputs">
-          <div class="container-currency">
-            <div>
-              <label for="local-value" class="color-primary font-bold">Valor médio de alimentacão</label>
+            <div class="container-input-text">
+              <div>
+                <label for="local-adrees" class="color-primary font-bold">Data final da viagem</label>
+              </div>
+              <input id="local-name" type="date" name="endDate" max="1979-12-31">
             </div>
-            <div class="container-fake-input-currency">
-              <span>R$</span>
-              <input for="currency-checkbox" id="local-value" type="number" min="1"
-                placeholder="Digite valor em reais" />
+          </section>
+          <section class="orientation-group-inputs">
+            <div class="container-currency">
+              <div>
+                <label for="local-value" class="color-primary font-bold">Valor médio de alimentacão</label>
+              </div>
+              <div class="container-fake-input-currency">
+                <span>R$</span>
+                <input for="currency-checkbox" id="local-value" type="number" min="1"
+                  placeholder="Digite valor em reais" />
+              </div>
             </div>
-          </div>
-
-        </section>
-        <section class="orientation-group-inputs">
-          <div class="container-input-text">
-            <div>
-              <label for="your-experience" class="color-primary font-bold">Conte sua experiência*</label>
-            </div>
-            <textarea id="your-experience" name="your-experience" maxlength="300"
-              placeholder="Nos conte sua experiência"></textarea>
-          </div>
-        </section>
-        <section class="orientation-group-inputs">
-          <div class="container-input-text flex-2">
-            <div>
-              <label for="local-picture" class="color-primary font-bold">Mostre as fotos tiradas</label>
-            </div>
-            <input id="local-picture" type="file" name="picture" multiple>
-          </div>
-        </section>
-      </form>
-    </section>
-    <div class="continer-button">
-      <button  class="fontsize-16 cursor-pointer" type="submit">Enviar experiência</button>
-    </div>
-  </div>
   
+          </section>
+          <section class="orientation-group-inputs">
+            <div class="container-input-text">
+              <div>
+                <label for="your-experience" class="color-primary font-bold">Conte sua experiência*</label>
+              </div>
+              <textarea id="your-experience" name="your-experience" maxlength="300"
+                placeholder="Nos conte sua experiência" required></textarea>
+            </div>
+          </section>
+          <section class="orientation-group-inputs">
+            <div class="container-input-text flex-2">
+              <div>
+                <label for="local-picture" class="color-primary font-bold">Mostre as fotos tiradas</label>
+              </div>
+              <input id="local-picture" type="file" name="picture" multiple>
+            </div>
+          </section>
+        <!-- </form> -->
+      </section>
+        <div class="container-button">
+          <button  class="fontsize-16 cursor-pointer" type="submit">Enviar experiência</button>
+        </div>
+    </div>
+
+  
+  </div>
+ 
   <footer class="background-green-secondary">
     <div class="container-footer max-size-flex">
      
@@ -321,6 +330,7 @@
     </div>
    
   </footer>
+</form>
 </body>
 
 </html>
