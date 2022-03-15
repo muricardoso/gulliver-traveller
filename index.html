@@ -9,20 +9,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/fonts.css">
-  <link rel="stylesheet" href="/css/colors.css">
-  <link rel="stylesheet" href="/css/hamburger.css">
-  <link rel="stylesheet" href="/css/inputs.css">
+
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/colors.css">
+  <link rel="stylesheet" href="./css/hamburger.css">
+  <link rel="stylesheet" href="./css/inputs.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/commons-class.css">
 
 </head>
 
 <body class="background-green-third">
   <header class="background-green-secondary">
     <div class="container-header">
-      <div>
-        <span class="font-fredoka fontsize-28 color-secondary"> Guilliver</span> <br>
-        <span class="principal-name font-bold fontsize-34 color-primary">Traveller</span>
+      <div class="no-user-selecte">
+        <span class="font-fredoka fontsize-28 color-secondary cursor-pointer"> Guilliver</span> <br>
+        <span class="principal-name font-bold fontsize-34 color-primary cursor-pointer">Traveller</span>
       </div>
 
       <input id="collapsible" class="toggle" type="checkbox">
@@ -32,16 +34,25 @@
           <div class="btn-right"></div>
         </div>
       </label>
-      <div class="menu-desktop">
-        <a class="color-primary fontsize-16 cursor-pointer">
-          Lugares
-          <div class="line-hover"></div>
-        </a>
-        <a class="color-primary fontsize-16 link cursor-pointer">
-          Conte suas experiencias
-          <div class="line-hover"></div>
-        </a>
+      <div class="container-menu">
+        <div class="container-user">
+          <div class="profile-picture">
+            <img src="./images/foto-perfil.jpg" alt="">
+          </div>
+          <span class="name">Murilo C.</span>
+        </div>
+        <div class="menu-desktop">
+          <a class="color-primary fontsize-16 cursor-pointer">
+            Lugares
+            <div class="line-hover"></div>
+          </a>
+          <a class="color-primary fontsize-16 link cursor-pointer">
+            Conte suas experiencias
+            <div class="line-hover"></div>
+          </a>
+        </div>
       </div>
+
     </div>
   </header>
   <div id="container-forms">
@@ -50,11 +61,11 @@
         <div class="title-card color-primary font-bold fontsize-22">Informações do lugar</div>
         <section class="orientation-group-inputs-radio">
           <div class="container-input-radio">
-            <label class="color-primary font-bold">Qual tipo do local?</label>
+            <label class="color-primary font-bold">Qual tipo do ponto turístico?</label>
             <div class="radio-options">
               <div class="flex-center cursor-pointer">
-                <input class="cursor-pointer" type="radio" id="tourist-spot" name="local_type" value="tourist_spot">
-                <label class="color-secondary cursor-pointer" for="tourist-spot">Ponto turístico</label>
+                <input class="cursor-pointer" type="radio" id="monument" name="local_type" value="monument">
+                <label class="color-secondary cursor-pointer" for="monument">monumento</label>
               </div>
               <div class="flex-center cursor-pointer">
                 <input class="cursor-pointer" type="radio" id="city" name="local_type" value="city">
@@ -74,33 +85,145 @@
             </div>
             <input id="local-name" type="text" name="name" placeholder="Nome do local">
           </div>
-        
-          
+
         </section>
         <section class="orientation-group-inputs">
-          <div class="container-input-text">
+          <div class="container-input-text flex-1">
             <div>
-              <label for="local-city" class="color-primary font-bold">Cidade</label>
+              <label for="local-name" class="color-primary font-bold">Cep</label>
             </div>
-            <input id="local-city" type="text" name="city" placeholder="Digite a cidade">
+            <input id="local-name" type="text" name="name" placeholder="Digite o cep">
           </div>
-          <div class="container-input-text">
+          <div class="container-input-text flex-2">
             <div>
               <label for="local-adrees" class="color-primary font-bold">Endereço</label>
             </div>
             <input id="local-adrees" type="text" name="adress" placeholder="Rua, Av...">
           </div>
-          <div class="container-input-text">
-            <div>
-              <label for="local-number" class="color-primary font-bold">Número</label>
+        </section>
+
+        <section class="orientation-group-inputs">
+          <div class="container-second-orientation flex-1">
+            <div class="container-input-text width-70">
+              <div>
+                <label for="local-number" class="color-primary font-bold">Número</label>
+              </div>
+              <input id="local-number" type="text" name="number" placeholder="Ex: 88">
             </div>
-            <input id="local-number" type="text" name="number" placeholder="Digite o número">
+            <div class="container-input-text flex-1">
+              <div>
+                <label for="local-city" class="color-primary font-bold">Complemento</label>
+              </div>
+              <input id="local-city" type="text" name="city" placeholder="Digite a cidade">
+            </div>
+          </div>
+          <div class="container-second-orientation flex-1">
+            <div class="container-input-text flex-1">
+              <div>
+                <label for="local-city" class="color-primary font-bold">Cidade</label>
+              </div>
+              <input id="local-city" type="text" name="city" placeholder="Digite a cidade">
+            </div>
+            <div class="container-input-text width-70">
+              <div>
+                <label for="local-city" class="color-primary font-bold">Estado</label>
+              </div>
+              <input id="local-" type="text" name="city" placeholder="Ex: Sp">
+            </div>
           </div>
         </section>
-  
+
+        <div class="title-card color-primary font-bold fontsize-22 mt-20">Horário de funcionamento</div>
+        <section class="orientation-group-inputs times flex-wrap">
+          
+          <div class="container-input-text">
+            <div>
+              <label for="your-experience" class="color-primary font-bold">Segunda</label>
+            </div>
+            <input type="time" id="operation" name="operation">
+          </div>
+          <div class="container-input-text ">
+            <div>
+              <label for="your-experience" class="color-primary font-bold">Terça</label>
+            </div>
+            <input type="time" id="operation" name="operation">
+          </div>
+          <div class="container-input-text ">
+            <div>
+              <label for="your-experience" class="color-primary font-bold">Quarta</label>
+            </div>
+            <input type="time" id="operation" name="operation">
+          </div>
+          <div class="container-input-text ">
+            <div>
+              <label for="your-experience" class="color-primary font-bold">Quinta</label>
+            </div>
+            <input type="time" id="operation" name="operation">
+          </div>
+          <div class="container-input-text ">
+            <div>
+              <label for="your-experience" class="color-primary font-bold">Sexta</label>
+            </div>
+            <input type="time" id="operation" name="operation">
+          </div>
+          <div class="container-input-text ">
+            <div>
+              <label for="your-experience" class="color-primary font-bold">Sábado</label>
+            </div>
+            <input type="time" id="operation" name="operation">
+          </div>
+          <div class="container-input-text ">
+            <div>
+              <label for="your-experience" class="color-primary font-bold">Domingo</label>
+            </div>
+            <input type="time" id="operation" name="operation">
+          </div>
+          <section class="orientation-group-inputs-radio ml-15">
+            <div class="container-input-radio">
+              <label class="color-primary font-bold">Aberto nos feriados?</label>
+              <div class="radio-options">
+                <div class="flex-center cursor-pointer">
+                  <input class="cursor-pointer" type="radio" id="holidayYes" name="holidayOpen" value="holidayYes">
+                  <label class="color-secondary cursor-pointer" for="holidayYes">Sim</label>
+                </div>
+                <div class="flex-center cursor-pointer">
+                  <input class="cursor-pointer" type="radio" id="holidayNo" name="holidayOpen" value="holidayNo">
+                  <label class="color-secondary  cursor-pointer" for="holidayNo">Não</label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </section>
+        <section class="orientation-group-inputs">
+          <div class="container-input-radio">
+            <label class="color-primary font-bold">Cobra entrada?</label>
+            <div class="radio-options">
+              <div class="flex-center cursor-pointer">
+                <input class="cursor-pointer" type="radio" id="payEntryYes" name="payEntry" value="payEntryYes">
+                <label class="color-secondary cursor-pointer" for="payEntryYes">Sim</label>
+              </div>
+              <div class="flex-center cursor-pointer">
+                <input class="cursor-pointer" type="radio" id="payEntryNo" name="payEntry" value="payEntryNo">
+                <label class="color-secondary  cursor-pointer" for="payEntryNo">Não</label>
+              </div>
+            </div>
+          </div>
+          <div class="ml-15">
+            <div>
+              <label for="local-value" class="color-primary font-bold">Valor da entrada</label>
+            </div>
+            <div class="container-fake-input-currency">
+              <span>R$</span>
+              <input for="currency-checkbox" id="local-value" type="number" min="1"
+                placeholder="Digite valor em reais" />
+            </div>
+          </div>
+        </section>
       </form>
+
     </section>
-  
+<!-- OTHER CARD -->
     <section id="card-cadastro-turistico" class="background-green-secondary">
       <form action="" method="post">
         <div class="title-card color-primary font-bold fontsize-22">Sua experiência</div>
@@ -118,13 +241,13 @@
         <section class="orientation-group-inputs">
           <div class="container-input-text">
             <div>
-              <label for="local-adrees" class="color-primary font-bold">Quando iniciou?</label>
+              <label for="local-adrees" class="color-primary font-bold">Data inicial da viagem</label>
             </div>
             <input id="local-name" type="date" name="startDate" placeholder="">
           </div>
           <div class="container-input-text">
             <div>
-              <label for="local-adrees" class="color-primary font-bold">Quando encerrou?</label>
+              <label for="local-adrees" class="color-primary font-bold">Data final da viagem</label>
             </div>
             <input id="local-name" type="date" name="endDate" placeholder="">
           </div>
@@ -136,7 +259,8 @@
             </div>
             <div class="container-fake-input-currency">
               <span>R$</span>
-              <input for="currency-checkbox" id="local-value" type="number" min="1" placeholder="Digite valor em reais"/>
+              <input for="currency-checkbox" id="local-value" type="number" min="1"
+                placeholder="Digite valor em reais" />
             </div>
           </div>
           <div class="container-input-text">
@@ -146,7 +270,15 @@
             <input id="local-adrees" type="text" name="adress" placeholder="Rua, Av...">
           </div>
         </section>
-  
+        <section class="orientation-group-inputs">
+          <div class="container-input-text">
+            <div>
+              <label for="your-experience" class="color-primary font-bold">Conte sua experiência</label>
+            </div>
+            <textarea id="your-experience" name="your-experience" maxlength="300"
+              placeholder="Nos conte sua experiência"></textarea>
+          </div>
+        </section>
       </form>
     </section>
   </div>

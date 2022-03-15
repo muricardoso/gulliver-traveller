@@ -8,10 +8,12 @@
     gap: 10px;
     flex-direction: column;
     margin-bottom: 10px;
+    /* flex-wrap: wrap; */
 }
 .container-input-text {
     display: flex;
     flex-direction: column;
+    /* flex: 1; */
 }
 
 .title-card {
@@ -31,9 +33,16 @@ form {
 .container-input-text input:focus {
     outline: 1px solid var(--color-secondary);
 }
+.container-second-orientation {
+    display: flex;
+    gap: 10px;
+}
 /* RADIO BUTTON */
 .orientation-group-inputs-radio {
     margin-bottom: 10px;
+}
+.times {
+    flex-direction: row;
 }
 .radio-options {
     display: flex;
@@ -110,6 +119,26 @@ select option {
 .container-fake-input-currency input:focus {
   outline: none;
 }
+textarea {
+    margin-top: 5px;
+    max-width: 100%;
+    min-width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--color-secondary);
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 110px;
+    border-radius: 8px;
+}
+textarea:focus {
+    outline:  1px solid var(--color-secondary);
+}
+.times .container-input-text {
+    width: 85px;
+}
+.input-time::selection {
+    background-color: var(--color-secondary);
+}
 
 @media (max-width: 320px) {  
 
@@ -126,8 +155,7 @@ select option {
     .orientation-group-inputs {
         flex-direction: row;
     }
-    input, select {
-        max-width: 300px;
+    .times .container-input-text {
+        width: 90px;
     }
-    
 }
