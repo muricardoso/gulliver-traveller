@@ -21,7 +21,7 @@
 
 <body class="background-green-third">
   <header class="background-green-secondary">
-    <div class="container-header">
+    <div class="container-header max-size-flex">
       <div class="no-user-selecte">
         <span class="font-fredoka fontsize-28 color-secondary cursor-pointer"> Guilliver</span> <br>
         <span class="principal-name font-bold fontsize-34 color-primary cursor-pointer">Traveller</span>
@@ -135,7 +135,7 @@
 
         <div class="title-card color-primary font-bold fontsize-22 mt-20">Horário de funcionamento</div>
         <section class="orientation-group-inputs times flex-wrap">
-          
+
           <div class="container-input-text">
             <div>
               <label for="your-experience" class="color-primary font-bold">Segunda</label>
@@ -220,10 +220,19 @@
             </div>
           </div>
         </section>
+        <section class="orientation-group-inputs">
+          <div class="container-input-text flex-1">
+            <div>
+              <label for="local-name" class="color-primary font-bold">Site do local</label>
+            </div>
+            <input id="local-url" type="url" name="url" placeholder="Digite a url">
+          </div>
+         
+        </section>
       </form>
 
     </section>
-<!-- OTHER CARD -->
+    <!-- OTHER CARD -->
     <section id="card-cadastro-turistico" class="background-green-secondary">
       <form action="" method="post">
         <div class="title-card color-primary font-bold fontsize-22">Sua experiência</div>
@@ -243,13 +252,13 @@
             <div>
               <label for="local-adrees" class="color-primary font-bold">Data inicial da viagem</label>
             </div>
-            <input id="local-name" type="date" name="startDate" placeholder="">
+            <input id="local-name" type="date" name="startDate" max="1979-12-31">
           </div>
           <div class="container-input-text">
             <div>
               <label for="local-adrees" class="color-primary font-bold">Data final da viagem</label>
             </div>
-            <input id="local-name" type="date" name="endDate" placeholder="">
+            <input id="local-name" type="date" name="endDate" max="1979-12-31">
           </div>
         </section>
         <section class="orientation-group-inputs">
@@ -263,12 +272,7 @@
                 placeholder="Digite valor em reais" />
             </div>
           </div>
-          <div class="container-input-text">
-            <div>
-              <label for="local-adrees" class="color-primary font-bold">Endereço</label>
-            </div>
-            <input id="local-adrees" type="text" name="adress" placeholder="Rua, Av...">
-          </div>
+
         </section>
         <section class="orientation-group-inputs">
           <div class="container-input-text">
@@ -279,9 +283,40 @@
               placeholder="Nos conte sua experiência"></textarea>
           </div>
         </section>
+        <section class="orientation-group-inputs">
+          <div class="container-input-text flex-2">
+            <div>
+              <label for="local-picture" class="color-primary font-bold">Mostre as fotos tiradas</label>
+            </div>
+            <input id="local-picture" type="file" name="picture" multiple>
+          </div>
+        </section>
       </form>
     </section>
   </div>
+  <footer class="background-green-secondary">
+    <div class="container-footer max-size-flex">
+     
+      <div class="no-user-selecte">
+        <span class="font-fredoka fontsize-28 color-secondary cursor-pointer"> Guilliver</span> <br>
+        <span class="principal-name font-bold fontsize-34 color-primary cursor-pointer">Traveller</span>
+      </div>
+        <div class="color-primary fontsize-14 mtb-20">
+          Copyright © 2022. Todos direitos reservados.
+        </div>
+      <div class="container-legals">
+        <a class="color-primary fontsize-16 cursor-pointer">
+          Termos de uso
+          <div class="line-hover"></div>
+        </a>
+        <a class="color-primary fontsize-16 link cursor-pointer">
+          políticas de privacidade
+          <div class="line-hover"></div>
+        </a>
+      </div>
+    </div>
+   
+  </footer>
 </body>
 
 </html>
